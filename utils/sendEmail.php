@@ -8,13 +8,13 @@ function send_to_email($destinatario, $assunto, $msgEmail)
         $mail = new PHPMailer;
         $mail->isSMTP();
         $mail->SMTPDebug = false;
-        $mail->Host = 'smtp.gmail.com';
-        $mail->Port = 587;
+        $mail->Host = '';
+        $mail->Port = '';
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'tls';
-        $mail->Password = 'qdqj fzjh udmy rbpy';
-        $mail->Username = 'felipegabfd@gmail.com';
-        $mail->setFrom('felipegabfd@gmail.com', 'Recuperação de Senha');
+        $mail->Password = '';
+        $mail->Username = 'user@mail.com';
+        $mail->setFrom('user@mail.com', 'Recuperação de Senha');
         $mail->AddAddress($destinatario);
         $mail->Subject = $assunto;
         $mail->isHTML(true);
